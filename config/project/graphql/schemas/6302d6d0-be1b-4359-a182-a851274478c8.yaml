@@ -1,0 +1,13 @@
+isPublic: false
+name: StorefrontAPI
+scope:
+  - 'sites.965b800e-6cb0-4618-b771-c8431ea77f46:read' # craft
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
+  - 'volumes.b1065fed-6e50-4628-aaff-9e955355db8f:read' # Product Images
+  - 'productTypes.b1c5958c-b159-48cb-88cf-9e4f2c146cbb:read' # T-Shirts
+  - 'volumes.b1065fed-6e50-4628-aaff-9e955355db8f:edit' # Product Images
+  - 'volumes.b1065fed-6e50-4628-aaff-9e955355db8f:create' # Product Images
+  - 'volumes.b1065fed-6e50-4628-aaff-9e955355db8f:save' # Product Images
+  - 'volumes.b1065fed-6e50-4628-aaff-9e955355db8f:delete' # Product Images

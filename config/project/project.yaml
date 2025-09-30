@@ -1,0 +1,54 @@
+dateModified: 1759239833
+email:
+  fromEmail: admin@admin.com
+  fromName: craft
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  localUploads:
+    hasUrls: true
+    name: 'Local Uploads'
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
+meta:
+  __names__:
+    02bfa378-ca9a-4dc3-a7ee-b68f9e0acabb: New # New
+    2de811be-2339-4ea7-8e98-ec3a6c21e505: Article # Article
+    4db531cf-1111-4bdf-bdc9-5b9c3b131bbe: 'Press Release' # Press Release
+    6e538645-3446-4325-8177-173b83396a95: Press # Press
+    8d824e39-4ca1-4618-8796-f4a454fdb7bb: 'Public Schema' # Public Schema
+    177cc79e-e3c1-44ba-9fae-aa407e393cc0: Doc # Doc
+    965b800e-6cb0-4618-b771-c8431ea77f46: craft # craft
+    5690c58d-c74b-41fb-b055-e88a40e6c329: 'Featured Image' # Featured Image
+    6302d6d0-be1b-4359-a182-a851274478c8: StorefrontAPI # StorefrontAPI
+    aacd7d27-33ee-4655-b3fa-911682f8d5ef: Docs # Docs
+    abcc3fdb-d903-483b-a9e6-8aa596c6b2ee: Primary # Primary
+    b1c5958c-b159-48cb-88cf-9e4f2c146cbb: T-Shirts # T-Shirts
+    b3c5c1da-0994-41e6-8e38-9f815794545c: Dummy # Dummy
+    b1030f57-2d1a-4f23-9a64-20923b118edc: Body # Body
+    b1065fed-6e50-4628-aaff-9e955355db8f: 'Product Images' # Product Images
+    bf49cb03-f9fe-462b-9ad9-aeecfbaf93b6: PublicAPI # PublicAPI
+    c0eec0f7-5f7a-43c5-847f-4a4eeefb5692: Description # Description
+    d04287a2-9b5f-4d18-be2c-dc643720a450: 'Press Contact' # Press Contact
+    d4dd31dd-3080-4ec6-8c14-5ad3caf183c0: craft # craft
+    e0077545-2e15-47e2-af73-44ac2d8bf4e8: Articles # Articles
+plugins:
+  commerce:
+    edition: pro
+    enabled: true
+    licenseKey: T7O6C3BL0SXNIO17F18RK26S
+    schemaVersion: 5.4.0.5
+system:
+  edition: solo
+  live: true
+  name: craft
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

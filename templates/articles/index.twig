@@ -1,0 +1,22 @@
+{% extends "_layouts/base" %}
+{% set title = "Articles" %}
+
+{% block content %}
+  <h1>Articles</h1>
+  {% set entries = craft.entries.section('articles').orderBy('postDate desc').limit(20).all() %}
+  {% if entries|length %}
+    <ul>
+      {% for entry in entries %}
+        <li>
+          <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+          <small>{{ entry.postDate|date('M d, Y') }}</small>
+          {% if entry.body is defined %}
+            <p>{{ entry.body|striptags|slice(0,160) ~ '…' }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No articles yet.</p>
+  {% endif %}
+{% endblock %}

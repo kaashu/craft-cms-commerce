@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 177cc79e-e3c1-44ba-9fae-aa407e393cc0 # Doc
+handle: docs
+maxAuthors: 1
+name: Docs
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  965b800e-6cb0-4618-b771-c8431ea77f46: # craft
+    enabledByDefault: true
+    hasUrls: true
+    template: docs/_entry.twig
+    uriFormat: 'docs/{slug}'
+type: channel

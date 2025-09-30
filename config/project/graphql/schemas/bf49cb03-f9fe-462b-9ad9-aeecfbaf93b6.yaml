@@ -1,0 +1,18 @@
+isPublic: false
+name: PublicAPI
+scope:
+  - 'sections.e0077545-2e15-47e2-af73-44ac2d8bf4e8:read' # Articles
+  - 'sections.aacd7d27-33ee-4655-b3fa-911682f8d5ef:read' # Docs
+  - 'sections.6e538645-3446-4325-8177-173b83396a95:read' # Press
+  - 'sections.e0077545-2e15-47e2-af73-44ac2d8bf4e8:edit' # Articles
+  - 'sections.e0077545-2e15-47e2-af73-44ac2d8bf4e8:create' # Articles
+  - 'sections.e0077545-2e15-47e2-af73-44ac2d8bf4e8:save' # Articles
+  - 'sections.e0077545-2e15-47e2-af73-44ac2d8bf4e8:delete' # Articles
+  - 'sections.aacd7d27-33ee-4655-b3fa-911682f8d5ef:edit' # Docs
+  - 'sections.aacd7d27-33ee-4655-b3fa-911682f8d5ef:create' # Docs
+  - 'sections.aacd7d27-33ee-4655-b3fa-911682f8d5ef:save' # Docs
+  - 'sections.aacd7d27-33ee-4655-b3fa-911682f8d5ef:delete' # Docs
+  - 'sections.6e538645-3446-4325-8177-173b83396a95:edit' # Press
+  - 'sections.6e538645-3446-4325-8177-173b83396a95:create' # Press
+  - 'sections.6e538645-3446-4325-8177-173b83396a95:save' # Press
+  - 'sections.6e538645-3446-4325-8177-173b83396a95:delete' # Press

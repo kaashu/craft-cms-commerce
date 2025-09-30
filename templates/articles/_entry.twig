@@ -1,0 +1,29 @@
+{% extends "_layouts/base" %}
+{% set title = entry.title %}
+
+{% block content %}
+  <article>
+    <h1>{{ entry.title }}</h1>
+    <small>Published {{ entry.postDate|date('M d, Y') }}</small>
+
+    {% if entry.featuredImage.one() %}
+      <figure>
+        <img src="{{ entry.featuredImage.one().url }}" alt="{{ entry.title }}">
+      </figure>
+    {% endif %}
+
+    {% if entry.body is defined %}
+      <div>{{ entry.body|raw }}</div>
+    {% else %}
+      <p>Content coming soon.</p>
+    {% endif %}
+
+    {% if entry.tags is defined and entry.tags.count() %}
+      <p><strong>Tags:</strong>
+        {% for tag in entry.tags.all() %}
+          <a href="{{ tag.url }}">{{ tag.title }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </p>
+    {% endif %}
+  </article>
+{% endblock %}

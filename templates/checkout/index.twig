@@ -1,0 +1,39 @@
+{% extends "_layouts/base" %}
+{% set title = "Checkout" %}
+
+{% block content %}
+<section class="max-w-3xl mx-auto px-6 py-10">
+  <h1 class="text-2xl font-bold mb-6">{{ title }}</h1>
+
+  {% set cart = craft.commerce.carts.cart %}
+
+  {% if cart and cart.lineItems|length %}
+    <h2 class="text-lg font-semibold mb-4">Order Summary</h2>
+    <ul class="mb-6 border rounded-lg divide-y">
+      {% for item in cart.lineItems %}
+        <li class="p-4 flex justify-between">
+          <span>{{ item.description }} (x{{ item.qty }})</span>
+          <span>${{ item.subtotal|number_format(2) }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="font-semibold text-lg mb-6">
+      Total: ${{ cart.totalPrice|number_format(2) }}
+    </p>
+
+    <form method="post" action="">
+      {{ csrfInput() }}
+      {{ actionInput('commerce/payments/pay') }}
+      {{ hiddenInput('gatewayId', 1) }} {# assumes Dummy Gateway has ID = 1 #}
+
+      <button type="submit" 
+              class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg shadow-md">
+        Complete Order
+      </button>
+    </form>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+</section>
+{% endblock %}

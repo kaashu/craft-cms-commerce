@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 4db531cf-1111-4bdf-bdc9-5b9c3b131bbe # Press Release
+handle: press
+maxAuthors: 1
+name: Press
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  965b800e-6cb0-4618-b771-c8431ea77f46: # craft
+    enabledByDefault: true
+    hasUrls: true
+    template: press/_entry.twig
+    uriFormat: 'press/{slug}'
+type: channel

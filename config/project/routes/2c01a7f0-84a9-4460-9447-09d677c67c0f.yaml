@@ -1,0 +1,6 @@
+siteUid: null
+sortOrder: 1
+template: cart/index
+uriParts:
+  - cart
+uriPattern: cart

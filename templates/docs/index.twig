@@ -1,0 +1,24 @@
+{% extends "_layouts/base" %}
+{% set title = "Documentation" %}
+
+{% block content %}
+  <h1>Documentation</h1>
+  {% set docs = craft.entries.section('docs').level(1).orderBy('title asc').all() %}
+  <div class="grid">
+    {% for top in docs %}
+      <article>
+        <h3><a href="{{ top.url }}">{{ top.title }}</a></h3>
+        {% set children = top.getDescendants().all() %}
+        {% if children|length %}
+          <ul>
+          {% for child in children %}
+            <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </article>
+    {% else %}
+      <p>No docs yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

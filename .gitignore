@@ -1,0 +1,39 @@
+# Composer dependencies
+/vendor/
+
+# Node dependencies (if you add frontend tooling later)
+node_modules/
+
+# Build outputs
+/public/build/
+/dist/
+/.venv/
+/.cache/
+
+# Craft runtime files
+/storage/*
+!/storage/.gitignore
+
+/runtime/*
+!/runtime/.gitignore
+
+# Craft project backups
+/storage/backups/
+!/storage/backups/.gitignore
+
+# Asset transforms & caches
+/web/cpresources/*
+!/web/cpresources/.gitignore
+
+# Environment & local overrides
+/.env
+/.env.*.local
+/config/license.key
+/config/project/project.yaml.lock
+
+# IDE/editor cruft
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp

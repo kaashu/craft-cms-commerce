@@ -1,0 +1,7 @@
+color: green
+default: true
+description: null
+handle: new
+name: New
+sortOrder: 99
+store: abcc3fdb-d903-483b-a9e6-8aa596c6b2ee # Primary

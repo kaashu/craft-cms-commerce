@@ -1,0 +1,19 @@
+{% extends "_layouts/base" %}
+{% set title = "Press Releases" %}
+
+{% block content %}
+  <h1>Press Releases</h1>
+  {% set items = craft.entries.section('press').orderBy('postDate desc').limit(20).all() %}
+  {% for item in items %}
+    <article style="margin:1.25rem 0">
+      <h3>{{ item.title }}</h3>
+      <small>{{ item.postDate|date('M d, Y') }}</small>
+      {% if item.body is defined %}
+        <p>{{ item.body|striptags|slice(0,180) ~ '…' }}</p>
+      {% endif %}
+      <a href="{{ item.url }}">Read more</a>
+    </article>
+  {% else %}
+    <p>No press releases yet.</p>
+  {% endfor %}
+{% endblock %}
