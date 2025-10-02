@@ -52,23 +52,26 @@ cp .env.example .env
 
 docker compose up -d --build
 
-### 4. Install Craft:
+### 4. Install Composer and Craft:
 
+docker compose exec app composer install  
 docker compose exec app php craft install
 
-setup:
+### 5. Setup:
 
-Username: admin
+Database Username: craft
 
 Email: admin@demo.com
 
-Password: choose one
+Database Password: craftpass
+
+Database name: craft
 
 Site URL (local):
 
 http://localhost:8080
 
-### 5. Log into the Control Panel:
+### 6. Log into the Control Panel:
 http://localhost:8080/admin
 
 Username: admin
